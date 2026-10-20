@@ -1,4 +1,4 @@
-# LFR - 2026
+<img width="1486" height="1036" alt="image" src="https://github.com/user-attachments/assets/f9ed6cef-e9ad-4e17-9222-77a8fc26aafd" /># LFR - 2026
 STM32 line follower robot on a custom 2-layer PCB. Black Pill (STM32F411) as a brain, TB6612FNG motor driver, 16-channel ARC16 line sensor, MPU6050 , and 3S LiPo through a 5V buck converter.
 
 <img width="1142" height="1000" alt="image" src="https://github.com/user-attachments/assets/0dc4e321-502a-4621-adf9-07c3b2b369ba" />
@@ -31,85 +31,31 @@ Main goals:
 
 ## Images
 
-<img src="images/schematic.png" alt="Schematic" width="600">
+<img width="936" height="1012" alt="image" src="https://github.com/user-attachments/assets/75298efc-8484-46b7-b83a-0c427e0bad20" />
 
-<img src="images/pcb-layout.png" alt="PCB Layout" width="600">
+<img width="1068" height="1028" alt="image" src="https://github.com/user-attachments/assets/80695ac8-cf52-49e4-b055-22052f6cf045" />
 
-<img src="images/pcb-3d.png" alt="3D View" width="600">
-
-<img src="images/robot.png" alt="Assembled Robot" width="600">
-
-## How it works
-
-**Power**
-
-```
-3S LiPo -> XT60 (J1) -> rocker switch (Jw2) -> VSW
-VSW -> buck converter -> +5V  (Black Pill 5V pin, ARC16 sensor)
-VSW -> TB6612FNG VM           (motor supply)
-VSW -> 33k / 10k divider      (battery voltage sense on PA2)
-Black Pill 3V3 -> MPU6050, TB6612FNG logic
-```
-
-- Bulk capacitors: 2 x 100 uF on VSW and 2 x 220 uF on +5V.
-- The sensor's analog output is divided down (10k / 15k) so the 5V signal is safe for the 3.3V ADC.
-- Test points: TP1 (+3V3), TP2 (+5V), TP3 (VSW) and TP4 (GND).
-
-**Pin mapping (as drawn in the schematic)**
-
-| MCU pin | Connected to | Function |
-| --- | --- | --- |
-| PB3 | TB6612FNG PWMA | Left motor speed (PWM) |
-| PB4 | TB6612FNG AIN2 | Left motor direction |
-| PA15 | TB6612FNG AIN1 | Left motor direction |
-| PA8 | TB6612FNG PWMB | Right motor speed (PWM) |
-| PA10 | TB6612FNG BIN1 | Right motor direction |
-| PA9 | TB6612FNG BIN2 | Right motor direction |
-| PA1 | ARC16 analog output (via divider) | Sensor reading |
-| PA4 - PA7 | ARC16 header pins 5 to 2 | Sensor channel lines |
-| PA2 | VSW divider (33k / 10k) | Battery voltage |
-| PA3 | SAVE button | Calibration / save |
-| NRST | RESET button | Reset |
-| PB8 | MPU6050 SCL | I2C1 clock |
-| PB7 | MPU6050 SDA | I2C1 data |
-| PB5 | Red LED | Status |
-| PB10 | Green LED | Status |
-
-TB6612FNG STBY is tied to 3V3, so the driver is always enabled.
+<img width="1486" height="1036" alt="image" src="https://github.com/user-attachments/assets/db2adbfd-8701-4c09-8dc8-a9e912f989f5" />
 
 ## Bill of Materials
 
 | Component | Purpose | Qty | Cost (INR) | Distributor |
 | --- | --- | --- | --- | --- |
-| N20 12V 600 RPM Micro Metal Gear Motor | Drive motors (the PCB has two motor outputs, J4 and J5) | 4 | ₹916 | Online |
-| Pro-Range 11.1V 850mAh 30C 3S LiPo Battery Pack | Main power | 1 | ₹1,159 | Online |
-| ARC16 Line Sensor | 16-channel IR line sensor array (J7) | 1 | ₹1,499 | Online (order 9 Oct 2026) |
-| N20 Wheels (pack of 2) | Drive wheels | 1 | ₹349 | Online (order 9 Oct 2026) |
-| Mini 3Pi N20 Caster Ball Wheel | Third support point | 1 | ₹39 | Online |
-| Tactile Push Button 6x6x5 (pack of 10) | RESET and SAVE buttons (SW2, SW3) | 1 | ₹19 | Online |
-| 100 uF 35V Electrolytic Capacitor | VSW bulk decoupling (C1, C3) | 2 | ₹24 | Online |
-| 220 uF 25V Electrolytic Capacitor | +5V bulk decoupling (C2, C4) | 4 | ₹28 | Online |
-| XT60 Female to Nylon T-Connector Adapter (14AWG, 15 cm) | Battery plug adapter | 1 | ₹131 | Online |
-| Amass XT60PW Male Connector | Battery connector on the PCB (J1) | 1 | ₹70 | Online |
-| SPST Rocker Switch | Main power switch (Jw2) | 1 | ₹12 | Online |
-| 2mm Pitch Male Berg Strip 40x1 | Pin headers | 1 | ₹13 | Online |
-| M3 x 10mm Bolt and Nut Set (25 pcs) | Mounting hardware | 1 | ₹78 | Online |
-| M3 x 6mm Bolt and Nut Set (25 pcs) | Mounting hardware | 1 | ₹67 | Online |
-| M3 x 10mm Male to Female Nylon Hex Spacer (10 pcs) | Standoffs | 1 | ₹82 | Online |
-| Shipping / fees (sensor and wheels order) | Order total ₹1,948 vs items ₹1,848 | 1 | ₹100 | Online |
+| N20 12V 600 RPM motor | main motor | 4 | ₹916 | Online |
+| 11.1V 850mAh 30C 3S LiPo Battery Pack | Main power | 1 | ₹1,159 | Online |
+| ARC16 Line Sensor | 16-channel IR line sensor array | 1 | ₹1,499 | Online |
+| N20 Wheels | wheels | 1 | ₹349 | Online |
+| N20 Caster Ball Wheel | Third support point | 1 | ₹39 | Online |
+| Push Button 6x6x5 (pack of 10) | RESET and SAVE buttons | 1 | ₹19 | Online |
+| 100 uF 35V cap | VSW bulk decoupling | 2 | ₹24 | Online |
+| 220 uF 25V cap | +5V bulk decoupling | 4 | ₹28 | Online |
+| XT60 Female to Nylon T-Connector | Battery plug adapter | 1 | ₹131 | Online |
+| XT60PW Male Connector | Battery connector | 1 | ₹70 | Online |
+| Rocker Switch | Main power switch | 1 | ₹12 | Online |
 | Custom 2-layer PCB (KiCad) | Main board | 1 | - | Bought separately |
-| WeAct Black Pill (STM32F411CEU6) | Main microcontroller (BLACK-PILL1) | 1 | - | Bought offline |
-| TB6612FNG Motor Driver Module | Dual motor driver (U2) | 1 | - | Bought offline |
-| MPU6050 (GY-521) Module | 6-axis IMU (J9) | 1 | - | Bought offline |
+| Black Pill (STM32F411CEU6) | Main microcontroller | 1 | - | Bought offline |
+| TB6612FNG Motor Driver | Dual motor driver | 1 | - | Bought offline |
+| MPU6050 Module | 6-axis IMU | 1 | - | Bought offline |
 | 5V Buck Converter Module | Battery to 5V (BUCK1) | 1 | - | Bought offline |
-| Resistors (through-hole): 330 ohm x2, 10k x2, 15k x1, 33k x1 | LED current limiting, voltage dividers (R1 to R6) | 6 | - | Bought offline |
-| LEDs: 1 green, 1 red | Status indicators (D1, D2) | 2 | - | Bought offline |
-| Female Header Sockets | Sockets for Black Pill, TB6612FNG and MPU6050 | 1 set | - | Bought offline |
+| Custom PCB | PCB | 1 | 1500 | whypcb |
 
-Items marked "Bought offline" came from a local shop. Their cost is not included in the totals below.
-
-| Summary | Cost (INR) |
-| --- | --- |
-| Parts order (motors, battery, connectors, hardware) | ₹2,638 |
-| Sensor + wheels order (9 Oct 2026, incl. ₹100 shipping / fees) | ₹1,948 |
-| **Online total** | **₹4,586** |
