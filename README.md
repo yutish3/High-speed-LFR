@@ -52,7 +52,6 @@ Main goals:
 | XT60 Female to Nylon T-Connector | Battery plug adapter | 1 | ₹131 | Online |
 | XT60PW Male Connector | Battery connector | 1 | ₹70 | Online |
 | Rocker Switch | Main power switch | 1 | ₹12 | Online |
-| Custom 2-layer PCB (KiCad) | Main board | 1 | - | Bought separately |
 | Black Pill (STM32F411CEU6) | Main microcontroller | 1 | - | Bought offline |
 | TB6612FNG Motor Driver | Dual motor driver | 1 | - | Bought offline |
 | MPU6050 Module | 6-axis IMU | 1 | - | Bought offline |
