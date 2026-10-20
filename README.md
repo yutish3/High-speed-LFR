@@ -1,4 +1,4 @@
-<img width="1486" height="1036" alt="image" src="https://github.com/user-attachments/assets/f9ed6cef-e9ad-4e17-9222-77a8fc26aafd" /># LFR - 2026
+# LFR - 2026
 STM32 line follower robot on a custom 2-layer PCB. Black Pill (STM32F411) as a brain, TB6612FNG motor driver, 16-channel ARC16 line sensor, MPU6050 , and 3S LiPo through a 5V buck converter.
 
 <img width="1142" height="1000" alt="image" src="https://github.com/user-attachments/assets/0dc4e321-502a-4621-adf9-07c3b2b369ba" />
