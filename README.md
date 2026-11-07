@@ -37,6 +37,12 @@ Main goals:
 
 <img width="1486" height="1036" alt="image" src="https://github.com/user-attachments/assets/db2adbfd-8701-4c09-8dc8-a9e912f989f5" />
 
+<img width="1120" height="648" alt="image" src="https://github.com/user-attachments/assets/a3318482-0e05-4724-894f-5408a045b78e" />
+
+<img width="1600" height="986" alt="image" src="https://github.com/user-attachments/assets/06906399-f0ab-401a-b9e6-22870615e767" />
+
+
+
 ## Bill of Materials
 
 | Component | Purpose | Qty | Cost (INR) | Distributor |
