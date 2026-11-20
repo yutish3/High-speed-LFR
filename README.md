@@ -42,6 +42,16 @@ Main goals:
 <img width="1600" height="986" alt="image" src="https://github.com/user-attachments/assets/06906399-f0ab-401a-b9e6-22870615e767" />
 
 
+## ASSEMBLY
+1) solder all the components on the pcb according to the schematic
+2) screw the extenders , screw for sensor and n20 motor holder on the chassis
+3) solder the connection between motor and the main pcb
+4) connect sensor via jumper cable
+5) plug in the wheels to the n20 motor shaft
+
+and with that assembly is complete
+
+
 
 ## Bill of Materials
 
